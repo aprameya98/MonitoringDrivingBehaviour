@@ -15,14 +15,14 @@ class WorkingArea extends Component {
 componentDidMount(){
 // OnLoad function
 // if counter exceeds 5, then stop process
-this.heading.innerHTML = this.props.location.state.userName+"</br>Start Your Data Science Jounrney with XP-2";
+this.heading.innerHTML = this.props.location.state.userName+"</br>Start Your Car Data Gathering and Processing Jounrney";
 this.buttonpressed = 0;
 this.counter = 0;
 
 }
 
 downloadallfiles = () =>{
-  axios.post("http://192.168.1.8:4000/downloadfiles/",{
+  axios.post("<enter link for post request>/",{
     username : this.props.location.state.userName
   })
     .then(res => { // then print response status
@@ -36,45 +36,6 @@ downloadallfiles = () =>{
     // then print response status
     console.log(err)
     })
-}
-
-testall = () =>{
-  window.open('http://192.168.1.8:4000/videos/'+this.props.location.state.userName+'.zip');
-}
-
-dividetheframes = () =>{
-  var username = this.props.location.state.userName
-  var videoname =  this.videoname.value
-  var imagetype = 'png'
-  var videourl = 'http://localhost:4000/videos/'+username+'/downloads/'+videoname+'.mp4'
-  var low = '1'
-  var high = '5'
-  var data = {'username':username,'videoname':videoname,'videourl':videourl,'imagetype':imagetype,'low':low,'high':high}
-  console.log("inside the testdjangoapi function : ")
-  axios.post("http://127.0.0.1:8000/index/",data)
-    .then(res => { // then print response status
-      //toast.success('upload success')
-      console.log("API message : ")
-      console.log(res)
-      console.log(res.data["message"])
-      if(this.DataRetrieved) {
-       this.DataRetrieved.innerHTML = res.data["message"];
-    }
-    this.downloadallfiles();
-    })
-    .catch(err => { // then print response status
-    //  toast.error('upload fail')
-    console.log("fail")
-    console.log(err)
-    this.dividetheframes();
-    })
-}
-
-wait = (ms) =>{
-var d = new Date();
-var d2 = null;
-do { d2 = new Date(); }
-while(d2-d < ms);
 }
 
 
@@ -112,23 +73,13 @@ render() {
       <h1 className = "AppName" ref = {c => this.heading = c}></h1>
       <div className="SignIn">
         <form onSubmit={this.handleSubmit}>
-        <p class = "SignInHead">X-P2</p>
-        <p class = "SignUpHead">Begin the data gathering process with just a few steps.</p>
+        <p class = "SignInHead">Car Monitoring </p>
+        <p class = "SignUpHead">Begin the data gathering and processing in just a few Steps.</p>
         &nbsp;
           <FormGroup controlId="url" bsSize="large">
-            <FormControl
-              autoFocus
-              placeholder="Enter the url of the youtube video"
-              ref = {c => this.videourl = c}
-            />
-          </FormGroup>
 
-          <FormGroup controlId="url" bsSize="large">
-            <FormControl
-              autoFocus
-              placeholder="Enter the name of the video"
-              ref = {c => this.videoname = c}
-            />
+          <p>Enter fields and tables required for the project</p>
+
           </FormGroup>
 
           <Button className="StartButton" block bsSize="large" onClick={this.handleSubmit} type="button">
@@ -139,7 +90,7 @@ render() {
         </form>
       </div>
       <div className="SecondBoxSignIn">
-        <p className = "LinkToAccount"> Done downloading the files?&nbsp;
+        <p className = "LinkToAccount"> Done processing?&nbsp;
           <Link className="LinkToSignUp" onClick={this.Logout}>Log out</Link>
         </p>
       </div>

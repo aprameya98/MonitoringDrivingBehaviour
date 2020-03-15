@@ -27,7 +27,7 @@ signupUser = () =>{
     var fullname = this.fullName.value;
     var password = this.Password.value;
     var data = email+","+username+","+fullname+","+password
-    axios.post("http://192.168.1.8:8080/addusertodatabase",data)
+    axios.post("http://localhost:8080/addusertodatabase",data)
       .then(res => { // then print response status
         const cookies = new Cookies()
         cookies.set('username',this.userName.value, { path: '/' })
@@ -53,7 +53,7 @@ validateEmail = (email) => {
 
 checkforexistingUsername = (field,value) =>{
   var data = field+","+value;
-  axios.post("http://192.168.1.8:8080/validateinfo",data)
+  axios.post("http://localhost:8080/validateinfo",data)
     .then(res => { // then print response status
       if(res.data["message"] == "Yes"){
         // existing emailID
@@ -72,7 +72,7 @@ checkforexistingUsername = (field,value) =>{
 
 checkforexistingEmail = (field,value,username) =>{
   var data = field+","+value;
-  axios.post("http://192.168.1.8:8080/validateinfo",data)
+  axios.post("http://localhost:8080/validateinfo",data)
     .then(res => { // then print response status
       if(res.data["message"] == "Yes"){
         // existing emailID
@@ -170,11 +170,11 @@ handleSubmit = () =>{
 render() {
     return (
       <div className = "BackgroundSign">
-      <h1 className = "AppName" >End-to-end data curation and annotation platform</h1>
+      <h1 className = "AppName" >Monitoring driving behaviour and car health<br/></h1>
       <div className="Login">
         <form>
-        <p class = "SignInHead">X-P1</p>
-        <p class = "SignUpHead">Sign up to make data collection and image annotation easier.</p>
+        <p class = "SignInHead">Car Monitoring</p>
+        <p class = "SignUpHead">Sign up to make data collection from autombiles and processing easy.</p>
 
         <FormGroup controlId="email" bsSize="large">
           <FormControl

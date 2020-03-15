@@ -132,7 +132,7 @@ onMouseMove onMouseOut onMouseOver onMouseUp
      <nav>
        <ul className={styles.NaviText}>
         <li className={styles.LogoElement}>
-        <button id="btnFile" className={styles.btnclass}>X-P2</button>
+        <button id="btnFile" className={styles.btnclass}>Monitoring driving behaviour and car health</button>
         </li>
 
        <li className={styles.Navielements} onClick={toggle1open} onMouseLeave = {toggle1close}>

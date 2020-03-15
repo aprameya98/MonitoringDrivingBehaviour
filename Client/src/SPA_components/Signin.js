@@ -13,7 +13,7 @@ class Signin extends Component {
 
 handleSubmit = () =>{
   var data = this.usercredentials.value+","+this.Password.value
-  axios.post("http://192.168.1.8:8080/authorizeuser",data)
+  axios.post("http://localhost:8080/authorizeuser",data)
     .then(res => { // then print response status
       if(res.data["message"] == "No"){
         this.Error.innerHTML = "UserName or Password incorrect."
@@ -35,7 +35,7 @@ handleSubmit = () =>{
   render() {
     return (
       <div className = "BackgroundSign">
-      <h1 className = "AppName" >End-to-end data curation and annotation platform</h1>
+      <h1 className = "AppName" > Monitoring driving behaviour and car health</h1>
       <div className="SignIn">
         <form onSubmit={this.handleSubmit}>
         <p class = "SignInHead">X-P1</p>

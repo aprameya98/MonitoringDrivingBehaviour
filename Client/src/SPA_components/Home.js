@@ -9,7 +9,7 @@ class Home extends Component {
     return (
       <div className="App">
       <IntroBar/>
-      <h1>XP-2 (Frame Division Data Collection)HOME PAGE //TODO : ADD INTRODUCTION TO PROJECT</h1>
+      <h1> Monitoring driving behaviour and car health<br/>HOME PAGE //TODO : ADD INTRODUCTION TO PROJECT</h1>
       </div>
     );
   }

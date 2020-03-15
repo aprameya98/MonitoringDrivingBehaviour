@@ -4,16 +4,10 @@ import Cookies from 'universal-cookie';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Home from './Home';
-import TestAPI from './TestAPI';
 import Signin from './Signin';
-import TestDraw from './test_draw';
 import SignUp from './SignUp';
-import TestSignUp from './TestSignUp';
 import CustomRouting from './CustomRouting';
 import Error from './Error';
-import TestCookie from './Test_Cookies';
-import TestDjangoApi from './TestDjangoApi';
-import TestNodeAPI from './TestNodeAPI';
 
 // Routes for the webpages in the project
 
@@ -47,10 +41,7 @@ class Routes extends Component {
                  <Route path="/customrouting" component = {CustomRouting} />
                  <Route path="/signup" component = {SignUp} />
                  <Route path="/signin" component= {Signin} />
-                 <Route path="/testapi" component={TestAPI} />
                  <Route path ="/upload" component = {CustomRouting} />
-                 <Route path = "/testnodeapi" component = {TestNodeAPI} />
-                 <Route path = "/test" componenet = {TestDjangoApi} />
                  <Route component={Error} />
                </Switch>
             </div>

@@ -433,5 +433,5 @@ func main() {
     origins := handlers.AllowedOrigins([]string{"*"})
 
     fmt.Println("Running on port : 8080")
-    log.Fatal(http.ListenAndServe("192.168.1.8:8080",handlers.CORS(headers,methods,origins)(r)))
+    log.Fatal(http.ListenAndServe(":8080",handlers.CORS(headers,methods,origins)(r)))
 }
