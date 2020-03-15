@@ -8,7 +8,7 @@ MongoDB as NoSQL Database (27017)
 Vanilla Js for functions and bits of React code
 
 How to start the application :
-Steps to run the application (may involve downloading mongo,go libraries and setting up django environment)
+Steps to run the application (may involve downloading mongo,go libraries and setting up npm environmnent)
 clone the git
 
 Reactjs : 3000

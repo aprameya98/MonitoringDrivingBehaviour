@@ -38,8 +38,8 @@ handleSubmit = () =>{
       <h1 className = "AppName" > Monitoring driving behaviour and car health</h1>
       <div className="SignIn">
         <form onSubmit={this.handleSubmit}>
-        <p class = "SignInHead">X-P1</p>
-        <p class = "SignUpHead">Sign In to make data collection and image annotation easier.</p>
+        <p class = "SignInHead">Car Monitoring</p>
+        <p class = "SignUpHead">Sign In to make data collection from autombiles and processing easy</p>
           <FormGroup controlId="email" bsSize="large">
             <FormControl
               autoFocus
