@@ -10,8 +10,8 @@ for refernce : https://github.com/Anirudh-RV/ImageAnnotationIouTool
 **Proposed architecture**
 MERN G
 
-MongoDB - Database
-Express - NodeJS backend
-ReactJS - Frontend
-NodeJS - Backend
-Golang - API (Application programming interface)
+1. MongoDB - Database
+2. Express - NodeJS backend
+3. ReactJS - Frontend
+4. NodeJS - Backend
+5. Golang - API (Application programming interface)
